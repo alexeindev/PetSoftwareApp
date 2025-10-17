@@ -64,7 +64,7 @@ public class Dog extends Animal{
         return barkingLevel;
     }
 
-    public static Dog addToRegister() {
+    public static Dog createDog() {
         System.out.println("\n=== REGISTRO DE PERRO ===\n");
 
         System.out.print("Nombre: ");
@@ -108,7 +108,7 @@ public class Dog extends Animal{
     }
 
     @Override
-    public  void showInfo() {
+    public void showInfo() {
         System.out.println("\n╔════════════════════════════════════════╗");
         System.out.println("║         INFORMACIÓN DEL PERRO          ║");
         System.out.println("╠════════════════════════════════════════╣");
@@ -123,10 +123,5 @@ public class Dog extends Animal{
         System.out.printf("║ %-38s ║%n", "Bueno con otros perros: " + (isGoodWithOtherDogs() ? "Sí" : "No"));
         System.out.printf("║ %-38s ║%n", "Nivel de ladrido: " + getBarkingLevel());
         System.out.println("╚════════════════════════════════════════╝");
-    }
-
-    public static void main(String[] args) {
-        Dog hi = Dog.addToRegister();
-        hi.showInfo();
     }
 }

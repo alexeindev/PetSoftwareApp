@@ -9,22 +9,27 @@ public class Register {
 
     public void showRegister() {
         System.out.println("\n╔════════════════════════════════════════╗");
-        System.out.println("║         LISTADO DE ANIMALES             ║");
+        System.out.println("║         LISTADO DE ANIMALES            ║");
         System.out.println("╚════════════════════════════════════════╝\n");
 
         if (register.isEmpty()) {
-            System.out.println("  ℹ No hay contactos registrados\n");
+            System.out.println("  ℹ No hay animales registrados\n");
         } else {
             for (int i = 0; i < register.size(); i++) {
                 System.out.println("┌────────────────────────────────────┐");
-                System.out.printf("│  Animal No: %-25s │%n", i);
+                System.out.printf("│  Animal No: %-22s │%n", i);
                 System.out.println("└────────────────────────────────────┘");
                 register.get(i).showInfo();
             }
         }
     }
 
-    public void deleteAnimalFromRegister(int animalNumber) {
+    public void removeAnimalFromRegister(int animalNumber) {
+        if (register.isEmpty()) {
+            System.out.println("\n✗ No hay animales registrados para eliminar.");
+            return;
+        }
         register.remove(animalNumber);
+        System.out.println("\n✓ ¡Animal eliminado del registro exitosamente!");
     }
 }

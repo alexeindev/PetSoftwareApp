@@ -67,7 +67,7 @@ public class Cat extends Animal {
         this.outdoor = outdoor;
     }
 
-    public static Cat addToRegister() {
+    public static Cat createCat() {
         System.out.println("\n=== REGISTRO DE GATO ===\n");
 
         System.out.print("Nombre: ");
@@ -129,10 +129,5 @@ public class Cat extends Animal {
         System.out.printf("║ %-38s ║%n", "Usa caja de arena: " + (isLitterBoxTrained() ? "Sí" : "No"));
         System.out.printf("║ %-38s ║%n", "Sale al exterior: " + (isOutdoor() ? "Sí" : "No"));
         System.out.println("╚════════════════════════════════════════╝");
-    }
-
-    public static void main(String[] args) {
-        Cat myCat = Cat.addToRegister();
-        myCat.showInfo();
     }
 }

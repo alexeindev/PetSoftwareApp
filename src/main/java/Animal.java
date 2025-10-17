@@ -41,7 +41,7 @@ public abstract class Animal {
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
+
     }
 
     public void showInfo() {
